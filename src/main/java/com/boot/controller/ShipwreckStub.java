@@ -7,6 +7,10 @@ import java.util.Map;
 
 import com.boot.model.Shipwreck;
 
+
+/***
+ * this is acting as mock db data for ShipwreckController
+ */
 public class ShipwreckStub {
 	private static Map<Long, Shipwreck> wrecks = new HashMap<Long, Shipwreck>();
 	private static Long idIndex = 3L;
