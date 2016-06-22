@@ -1,10 +1,18 @@
 package com.boot.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Shipwreck {
+	@Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
 	Long id;
 	String name;
 	String description;
-	String condition;
+	String status;
 	Integer depth;
 	Double latitude;
 	Double longitude;
@@ -12,11 +20,11 @@ public class Shipwreck {
 
 	public Shipwreck() { }
 
-	public Shipwreck(Long id, String name, String description, String condition, Integer depth, Double latitude, Double longitude, Integer yearDiscovered) {
+	public Shipwreck(Long id, String name, String description, String status, Integer depth, Double latitude, Double longitude, Integer yearDiscovered) {
 		this.id = id;
 		this.name = name;
 		this.description = description;
-		this.condition = condition;
+		this.status = status;
 		this.depth = depth;
 		this.latitude = latitude;
 		this.longitude = longitude;
@@ -47,12 +55,12 @@ public class Shipwreck {
 		this.description = description;
 	}
 
-	public String getCondition() {
-		return condition;
+	public String getStatus() {
+		return status;
 	}
 
-	public void setCondition(String condition) {
-		this.condition = condition;
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
 	public Integer getDepth() {
